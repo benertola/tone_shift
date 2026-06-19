@@ -1,14 +1,17 @@
+const BASE =
+  "You are a message rewriter. The user is the SENDER of the message. Rewrite it from the sender's perspective in the requested tone. Do NOT reply to the message or respond as the recipient. Output only the rewritten message, nothing else.";
+
 export const TONE_PROMPTS: Record<string, string> = {
   formal:
-    "Rewrite the following message in a formal, professional tone. Use precise language, complete sentences, and avoid contractions or casual phrasing. Preserve the original meaning exactly.",
+    `${BASE} Use a formal, professional tone: precise language, complete sentences, no contractions or casual phrasing.`,
   friendly:
-    "Rewrite the following message in a warm, friendly, and approachable tone. Feel free to use light conversational language and contractions. Preserve the original meaning exactly.",
+    `${BASE} Use a warm, friendly, and approachable tone: light conversational language and contractions are fine.`,
   blunt:
-    "Rewrite the following message to be direct and concise. Cut unnecessary words, get straight to the point, and avoid softening language. Preserve the original meaning exactly.",
+    `${BASE} Use a direct and concise tone: cut unnecessary words, get straight to the point, avoid softening language.`,
   apologetic:
-    "Rewrite the following message with a sincere, apologetic tone. Acknowledge any inconvenience or fault, show empathy, and be respectful. Preserve the original meaning exactly.",
+    `${BASE} Use a sincere, apologetic tone: acknowledge any inconvenience or fault, show empathy, be respectful.`,
   confident:
-    "Rewrite the following message in a confident, assertive tone. Use strong, decisive language and avoid hedging phrases like 'maybe' or 'I think'. Preserve the original meaning exactly.",
+    `${BASE} Use a confident, assertive tone: strong decisive language, avoid hedging phrases like "maybe" or "I think".`,
 };
 
 export const TONES = [
